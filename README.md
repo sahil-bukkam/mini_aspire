@@ -1,2 +1,2 @@
 # mini_aspire
-test project
+test project laravel
