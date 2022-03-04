@@ -76,8 +76,7 @@ run below command to view all applicable routes and their methods
 
 To see api documentation, go through postman collection file
 
-
-mini aspire laravel apis postman collection.postman_collection.json
+    mini aspire laravel apis postman collection.postman_collection.json
 
 
 To review Test cases, please refer tests folder
@@ -88,5 +87,43 @@ to run the test cases execute below command
     ./vendor/bin/phpunit
 
 # Brief Documentation
+
+Mini aspire app is build for its customer as well as for its admin user.
+
+
+Both the users ie. customer as well as admin can register on this app (pages may be diffent)
+
+users are differentiated based on their type flag ie. 1-> admin , 2-> customer
+
+
+Both the users can login through same page and In the response we get type parameter based on which user can be redirected.
+
+
+Logout is common for both the users
+
+
+Only customer can request for loan ie. user type 2
+
+consider loan term is in weeks eg. 20 weeks, 10 weeks.
+
+
+Customer can see only loans which he has requested where as admin can see all the loans of all customers
+
+
+Only admin can approve/reject loan request placed by the customer
+
+admin cannot the status of the loan application where installments are already started
+
+
+Customers can pay their weekly installments (date validation are not applied as mentioned in the requirement)
+
+It only considers number of weekly installments to be paid.
+
+Customer can only pay installment after the loan gets approved
+
+similar validations are applied while paying installment such as if total amount is already paid.
+
+
+
 
 
