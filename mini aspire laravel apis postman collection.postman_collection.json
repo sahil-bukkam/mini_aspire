@@ -1,0 +1,1216 @@
+{
+	"info": {
+		"_postman_id": "bcbcb653-87ba-46f5-81fd-b7d6fb7b0459",
+		"name": "mini aspire laravel apis postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bukkamsahiladmin@gmail.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\",\n    \"name\": \"Sahil admin\",\n    \"contact_number\": 9637893370,\n    \"type\":1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "Register as an admin where type = 1 in request"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"bukkamsahiladmin@gmail.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\",\n    \"name\": \"Sahil admin\",\n    \"contact_number\": 9637893370,\n    \"type\":1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:17:15 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:17:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY0NjQwNzAzNSwiZXhwIjoxNjQ2NDEwNjM1LCJuYmYiOjE2NDY0MDcwMzUsImp0aSI6IkgzSUdGcDg5Y2wwaEh5QUsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.vo-twDtYAqkMVsVoWCeXv5uYHvv0bUaooblSzwXeUh8\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600000,\n    \"type\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bukkamsahil@gmail.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\",\n    \"name\": \"Sahil customer\",\n    \"contact_number\": 9637893370,\n    \"type\":2\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "Register as an user (customer)"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"bukkamsahil@gmail.com\",\n    \"password\": \"12345678\",\n    \"password_confirmation\": \"12345678\",\n    \"name\": \"Sahil customer\",\n    \"contact_number\": 9637893370,\n    \"type\":2\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:19:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:19:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY0NjQwNzE4NCwiZXhwIjoxNjQ2NDEwNzg0LCJuYmYiOjE2NDY0MDcxODQsImp0aSI6IkFuMW00VW5PdmlzdlBnbGYiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.VyW15VqSm-hz3HLpgfcHtevuGP1ZjDvahQIBrs-fygY\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600000,\n    \"type\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"bukkamsahil@gmail.com\",\n    \"password\": \"12345678\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Common Login Api for both customer and admin user"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"bukkamsahil@gmail.com\",\n    \"password\": \"12345678\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:23:29 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:23:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjQwNzQwOSwiZXhwIjoxNjQ2NDExMDA5LCJuYmYiOjE2NDY0MDc0MDksImp0aSI6IjlDUUlmY0JjUkFYUlJnNTkiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.-z62bFd79cwRRHzfwPjbTOXWCuu1FWmFG_aW74dFLM4\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600000,\n    \"type\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjQwNzQwOSwiZXhwIjoxNjQ2NDExMDA5LCJuYmYiOjE2NDY0MDc0MDksImp0aSI6IjlDUUlmY0JjUkFYUlJnNTkiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.-z62bFd79cwRRHzfwPjbTOXWCuu1FWmFG_aW74dFLM4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "common logout api for both customer and admin user"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:27:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:27:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/loans",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjQwNzY0NiwiZXhwIjoxNjQ2NDExMjQ2LCJuYmYiOjE2NDY0MDc2NDYsImp0aSI6IjY2U2ZwV3hqdVJtY3pyTFQiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.mie-X_0BX5-R3LnDJfXcgd13igtx91tpwwO1VTqZQGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 1000,\n    \"loan_term\": 20\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/loans",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"loans"
+					]
+				},
+				"description": "Loan request from customer (user)"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/loans",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 1000,\n    \"loan_term\": 20\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/loans",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"loans"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:29:46 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:29:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"amount\": 1000,\n        \"loan_term\": 20,\n        \"status\": 0,\n        \"weekly_amount\": 50,\n        \"amount_remaining\": 1000,\n        \"previous_weekly_amount\": 50,\n        \"created_at\": \"2022-03-04 15:29:46\",\n        \"updated_at\": \"2022-03-04 15:29:46\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Sahil customer\",\n            \"email\": \"bukkamsahil@gmail.com\",\n            \"contact_number\": 9637893370,\n            \"type\": 2,\n            \"created_at\": \"2022-03-04 15:19:44\",\n            \"updated_at\": \"2022-03-04 15:19:44\"\n        },\n        \"installments\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/loans",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjQwNzY0NiwiZXhwIjoxNjQ2NDExMjQ2LCJuYmYiOjE2NDY0MDc2NDYsImp0aSI6IjY2U2ZwV3hqdVJtY3pyTFQiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.mie-X_0BX5-R3LnDJfXcgd13igtx91tpwwO1VTqZQGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/loans",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"loans"
+					]
+				},
+				"description": "get a loan listing common for both customer and admin\nNote: admin can see all the loans from all the customer\nwhere as customer can see only loans belonging to him"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/loans",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/loans",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"loans"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:30:52 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:30:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 2,\n            \"amount\": \"1000.00\",\n            \"loan_term\": 20,\n            \"status\": 0,\n            \"weekly_amount\": \"50.00\",\n            \"amount_remaining\": \"1000.00\",\n            \"previous_weekly_amount\": \"50.00\",\n            \"created_at\": \"2022-03-04 15:29:46\",\n            \"updated_at\": \"2022-03-04 15:29:46\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Sahil customer\",\n                \"email\": \"bukkamsahil@gmail.com\",\n                \"contact_number\": 9637893370,\n                \"type\": 2,\n                \"created_at\": \"2022-03-04 15:19:44\",\n                \"updated_at\": \"2022-03-04 15:19:44\"\n            },\n            \"installments\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/loans/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjQwNzY0NiwiZXhwIjoxNjQ2NDExMjQ2LCJuYmYiOjE2NDY0MDc2NDYsImp0aSI6IjY2U2ZwV3hqdVJtY3pyTFQiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.mie-X_0BX5-R3LnDJfXcgd13igtx91tpwwO1VTqZQGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/loans/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"loans",
+						"1"
+					]
+				},
+				"description": "Get the details of individual loan"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/loans/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/loans/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"loans",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:43:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:43:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"amount\": \"1000.00\",\n        \"loan_term\": 20,\n        \"status\": 0,\n        \"weekly_amount\": \"50.00\",\n        \"amount_remaining\": \"1000.00\",\n        \"previous_weekly_amount\": \"50.00\",\n        \"created_at\": \"2022-03-04 15:29:46\",\n        \"updated_at\": \"2022-03-04 21:13:29\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Sahil customer\",\n            \"email\": \"bukkamsahil@gmail.com\",\n            \"contact_number\": 9637893370,\n            \"type\": 2,\n            \"created_at\": \"2022-03-04 15:19:44\",\n            \"updated_at\": \"2022-03-04 15:19:44\"\n        },\n        \"installments\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/loans/1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY0NjQwNzAzNSwiZXhwIjoxNjQ2NDEwNjM1LCJuYmYiOjE2NDY0MDcwMzUsImp0aSI6IkgzSUdGcDg5Y2wwaEh5QUsiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.vo-twDtYAqkMVsVoWCeXv5uYHvv0bUaooblSzwXeUh8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"status\":1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/loans/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"loans",
+						"1"
+					]
+				},
+				"description": "to approve or reject loan request by the admin"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/loans/1",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"status\":1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/loans/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"loans",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:48:50 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:48:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 2,\n        \"amount\": \"1000.00\",\n        \"loan_term\": 20,\n        \"status\": 1,\n        \"weekly_amount\": \"50.00\",\n        \"amount_remaining\": \"1000.00\",\n        \"previous_weekly_amount\": \"50.00\",\n        \"created_at\": \"2022-03-04 15:29:46\",\n        \"updated_at\": \"2022-03-04 15:48:50\",\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"Sahil customer\",\n            \"email\": \"bukkamsahil@gmail.com\",\n            \"contact_number\": 9637893370,\n            \"type\": 2,\n            \"created_at\": \"2022-03-04 15:19:44\",\n            \"updated_at\": \"2022-03-04 15:19:44\"\n        },\n        \"installments\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/loans/1/installments",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjQwNzY0NiwiZXhwIjoxNjQ2NDExMjQ2LCJuYmYiOjE2NDY0MDc2NDYsImp0aSI6IjY2U2ZwV3hqdVJtY3pyTFQiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.mie-X_0BX5-R3LnDJfXcgd13igtx91tpwwO1VTqZQGU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount_paid\": 50\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/loans/1/installments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"loans",
+						"1",
+						"installments"
+					]
+				},
+				"description": "Installment payment api"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/api/loans/1/installments",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount_paid\": 50\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/loans/1/installments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"loans",
+								"1",
+								"installments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:51:31 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Mar 2022 15:51:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"loan_id\": 1,\n        \"amount_paid\": 50,\n        \"created_at\": \"2022-03-04 15:51:31\",\n        \"updated_at\": \"2022-03-04 15:51:31\",\n        \"loan\": {\n            \"id\": 1,\n            \"user_id\": 2,\n            \"amount\": \"1000.00\",\n            \"loan_term\": 20,\n            \"status\": 1,\n            \"weekly_amount\": \"50.00\",\n            \"amount_remaining\": \"950.00\",\n            \"previous_weekly_amount\": \"50.00\",\n            \"created_at\": \"2022-03-04 15:29:46\",\n            \"updated_at\": \"2022-03-04 15:51:31\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}

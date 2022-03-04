@@ -4,13 +4,14 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Tests\Helpers\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use App\User;
 use App\Loan;
 use App\Installment;
 
 class InstallmentTest extends TestCase
 {
-    use RefreshDatabase;
+    use RefreshDatabase, DatabaseMigrations;
 
     // create installment test case
     public function testsInstallmentsAreCreatedCorrectly()

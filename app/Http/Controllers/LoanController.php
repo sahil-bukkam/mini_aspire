@@ -85,6 +85,10 @@ class LoanController extends Controller
      */
     public function show(Loan $loan)
     {
+        // check if user is admin
+        if (auth()->user()->type != 1 and auth()->user()->id != $loan->user_id) {
+            return response()->json(['error' => 'Customer cannot see details of loan belonging to others'], 403);
+        }
         return new LoanResource($loan);
     }
 

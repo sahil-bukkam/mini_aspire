@@ -4,12 +4,13 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Tests\Helpers\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use App\User;
 use App\Loan;
 
 class LoanTest extends TestCase
 {
-    use RefreshDatabase;
+    use RefreshDatabase, DatabaseMigrations;
 
     // create loan test case
     public function testsLoansAreCreatedCorrectly()
@@ -132,6 +133,12 @@ class LoanTest extends TestCase
     // test case for approve/reject loan
     public function testsLoansAreUpdatedCorrectly()
     {
+        $customer = factory(User::class)->create([
+            'email' => 'custuser@test.com',
+            'password' => bcrypt('12345678'),
+            'type' => 2
+        ]);
+
         $user = factory(User::class)->create([
             'email' => 'user@test.com',
             'password' => bcrypt('12345678'),
@@ -142,7 +149,7 @@ class LoanTest extends TestCase
         $headers = ['Authorization' => "Bearer $token"];
 
         $loan = factory(Loan::class)->create([
-            'user_id' => $user->id
+            'user_id' => $customer->id
         ]);
 
         $payload = [
@@ -157,8 +164,8 @@ class LoanTest extends TestCase
                 "status" => 1,
                 "user" => [
                     "id" => 1,
-                    "email" => "user@test.com",
-                    "type" => 1
+                    "email" => "custuser@test.com",
+                    "type" => 2
                 ],
                 "installments" => []
             ]])
@@ -200,8 +207,14 @@ class LoanTest extends TestCase
         $token = auth()->attempt(['email' => 'user@test.com','password' => '12345678']);
         $headers = ['Authorization' => "Bearer $token"];
 
+        $newuser = factory(User::class)->create([
+            'email' => 'newuser@test.com',
+            'password' => bcrypt('12345678'),
+            'type' => 2
+        ]);
+
         $loan = factory(Loan::class)->create([
-            'user_id' => $user->id
+            'user_id' => $newuser->id
         ]);
 
         $payload = [
@@ -227,8 +240,14 @@ class LoanTest extends TestCase
         $token = auth()->attempt(['email' => 'user@test.com','password' => '12345678']);
         $headers = ['Authorization' => "Bearer $token"];
 
+        $newuser = factory(User::class)->create([
+            'email' => 'newuser@test.com',
+            'password' => bcrypt('12345678'),
+            'type' => 2
+        ]);
+
         $loan = factory(Loan::class)->create([
-            'user_id' => $user->id
+            'user_id' => $newuser->id
         ]);
 
         $payload = [];
@@ -265,8 +284,14 @@ class LoanTest extends TestCase
         $token = auth()->attempt(['email' => 'user@test.com','password' => '12345678']);
         $headers = ['Authorization' => "Bearer $token"];
 
+        $newuser = factory(User::class)->create([
+            'email' => 'newuser@test.com',
+            'password' => bcrypt('12345678'),
+            'type' => 2
+        ]);
+
         $loan = factory(Loan::class)->create([
-            'user_id' => $user->id,
+            'user_id' => $newuser->id,
             'amount_remaining' => 500,
             'amount' => 1000
         ]);
@@ -286,7 +311,7 @@ class LoanTest extends TestCase
         $user = factory(User::class)->create([
             'email' => 'user@test.com',
             'password' => bcrypt('12345678'),
-            'type' => 1
+            'type' => 2
         ]);
 
         $token = auth()->attempt(['email' => 'user@test.com','password' => '12345678']);
@@ -309,7 +334,7 @@ class LoanTest extends TestCase
                         "user" => [
                             "id" => 1,
                             "email" => "user@test.com",
-                            "type" => 1
+                            "type" => 2
                         ],
                         "installments"=> []
                     ],
@@ -319,7 +344,7 @@ class LoanTest extends TestCase
                         "user" => [
                             "id" => 1,
                             "email" => "user@test.com",
-                            "type" => 1
+                            "type" => 2
                         ],
                         "installments" => []
                     ]
@@ -368,7 +393,7 @@ class LoanTest extends TestCase
         $user = factory(User::class)->create([
             'email' => 'user@test.com',
             'password' => bcrypt('12345678'),
-            'type' => 1
+            'type' => 2
         ]);
 
         $token = auth()->attempt(['email' => 'user@test.com','password' => '12345678']);
@@ -387,7 +412,7 @@ class LoanTest extends TestCase
                         "user" => [
                             "id" => 1,
                             "email" => "user@test.com",
-                            "type" => 1
+                            "type" => 2
                         ],
                         "installments"=> []
                 ]
@@ -423,6 +448,35 @@ class LoanTest extends TestCase
                             ]
                         ]
                 ]
+            ]);
+    }
+
+    // test authoriszation (Customer cannot see details of loan belonging to others)
+    public function testsAuthhorisationIndividualLoan()
+    {
+        $user = factory(User::class)->create([
+            'email' => 'user@test.com',
+            'password' => bcrypt('12345678'),
+            'type' => 2
+        ]);
+
+        $loan = factory(Loan::class)->create([
+            'user_id' => $user->id
+        ]);
+
+        $user = factory(User::class)->create([
+            'email' => 'newuser@test.com',
+            'password' => bcrypt('12345678'),
+            'type' => 2
+        ]);
+
+        $token = auth()->attempt(['email' => 'newuser@test.com','password' => '12345678']);
+        $headers = ['Authorization' => "Bearer $token"];
+
+        $response = $this->json('GET', 'api/loans/' . $loan->id, [], $headers)
+            ->assertStatus(403)
+            ->assertJson([
+                'error' => 'Customer cannot see details of loan belonging to others'
             ]);
     }
 
